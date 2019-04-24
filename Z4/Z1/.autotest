@@ -1,0 +1,59 @@
+{
+    "id": 77728,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 4, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1729,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/NAPOMENA: za epsilon koristite 10^-10. Npr const double eps = 1E-10\n\/\/NAPOMENA: ovdje imate dodatne ispravke za Z4: https:\/\/c2.etf.unsa.ba\/file.php\/76\/Z4_ispravke.txt\n\/\/POMOC: posto je malo teze skontati dijalog iz autotesta (nema unosa i novih redova)\n\/\/       pogledati sljedecu sliku za \"ljepsi\" ispis: http:\/\/tinyurl.com\/TP-2016-Z1Z4-AT1\n    {\/\/AT1: skoro-random main\n        _main();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n1 2 6 7 10 13\n5 4 2 1 5 7\n1 3 5 2 4 4\n1 3 1 7 4 3\n5 2 1 3 4 4\n1 3 4 3 4 7\n2 1 6 1 6 4\n5 2 3 1 3 4\n1 1 2 2 5 8\n1 3 4 3 1 7\n2 3\n0\n2\n"
+            },
+            "expected": [
+                "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 3. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 4. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 5. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 6. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 7. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 8. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 9. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 10. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija:\\n((3,4),(5,6),(11,18))\\n((7,5),(3,3),(3,9))\\n((3,6),(11,4),(9,8))\\n((7,5),(-1,7),(5,9))\\n((7,7),(1,1),(7,13))\\n((3,5),(13,15),(21,27))\\n((3,6),(3,14),(9,6))\\n((3,6),(9,6),(9,14))\\n((4,4),(12,4),(12,10))\\n((3,6),(9,6),(3,14))\\nTrougao sa najmanjim obimom: ((7,5),(3,3),(3,9))\\nParovi identicnih trouglova:\\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\nParovi podudarnih trouglova:\\n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))\\nParovi slicnih trouglova:\\n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1730,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT2: skoro-random main (ima rotacija + neispravan trougao + nema podudarnih\/slicnih...)\n     \/\/NAPOMENA: izuzetak ispisujete kao: e.what() << \", ponovite unos!\" << std::endl\n        _main();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n1 3 5 2 7 1\n1 1 2 2 3 3\n1 6 3 4 7 9\n1 0\n1\n5\n"
+            },
+            "expected": [
+                "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Nekorektne pozicije tjemena, ponovite unos!\\nUnesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija:\\n((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\\n((3.50635,3.90931),(17.3241,6.921),(7.09336,37.258))\\nTrougao sa najmanjim obimom: ((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\\nNema identicnih trouglova!\\nNema podudarnih trouglova!\\nNema slicnih trouglova!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

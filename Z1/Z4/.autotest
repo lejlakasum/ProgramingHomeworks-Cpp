@@ -1,0 +1,43 @@
+{
+    "test_specifications": [
+        {
+            "id": 3237,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: oficijelni autotest koji predstavlja formalni ulaz\/izlaz za ovaj zadatak\n\/\/Kraj fraze ozna\u010dava se prelaskom u novi red.\n\/\/Kraj unosa fraza zavr\u0161ava se dvostrukim prelaskom u novi red.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Danas je lijep i suncan dan\ndanas\nlijep\nsuncan\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon PigLatin transformacije: Danas je ijeplay i uncansay dan\\nRecenica nakon obrtanja fraza: Danas je pejil i nacnus dan\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ],
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 1, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true"
+}

@@ -1,0 +1,194 @@
+{
+    "id": 10003,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 5, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3836,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT1 (c9): trivijalan AT\n            Razlomak r (10, 17);\n            std::cout << \"Brojnik: \" << r.DajBrojnik() << std::endl\n                      << \"Nazivnik: \" << r.DajNazivnik();\n        } ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Brojnik: 10\\nNazivnik: 17"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3837,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT2 (c9): operator << + sva tri konstruktora\n            Razlomak r (17, 18), t (21), v;\n            std::cout << \"r = \" << r << \", t = \" << t << \", v = \" << v;\n        }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "r = 17\/18, t = 21, v = 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3838,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT3 (c9): operator >> (1\/3) ...\n     \/\/NAPOMENA: najlogicnija izvedba op>> ce proci\n     \/\/ove ATove. Dodatne izvedbe su nelogicne i nisu u skladu\n     \/\/sa ostaim tipovima...\n\n     \/\/ovdje cu koristiti specijalnu klasu (ne radi se na TP)\n     \/\/da preko stringa simuliram ulaz\n     \/\/cisto da se vide viska razmaci\n\n     \/\/NAPOMENA: pod \"razmakom\" se smatra SVAKI znak koji je BJELINA\n     \/\/odnosno ovih 6 znakova u en-US:\n     \/\/      \\n, |r, \\f, \\v, \\t, ' '\n     \/\/ i |r je sa backshashom, ali zbog buga pisem |r. Znaci, i \\R (samo malo r)\n     Razlomak r, q, t;\n     std::istringstream is (\"10\/20\"); \/\/ne mora sa \\n zavrsiti\n     is >> r;\n     std::cout << r << std::endl;\n\n     is.str (\"173\"); \/\/samo jedan broj, 173\/1\n     is.clear(); \/\/mora, radi EOF\n     is >> r;\n     std::cout << r << std::endl;\n\n     is.str (\"               173\/50\"); \/\/ispravno, razmaci prije\n     is.clear();\n     is >> r;\n     std::cout << r << std::endl;\n\n     is.str (\"               173\/50       \"); \/\/ispravno, razmaci prije, poslije\n     is.clear();\n     is >> r;\n     std::cout << r << std::endl;\n\n\n     is.str (\"173\/51\\n  ne zanima nas sta je nakon     \"); \/\/ispravno\n     is.clear();\n     is >> r; \/\/sljedece citanje bi bilo neispravno\n     std::cout << r << std::endl;\n\n     is.str (\"17\/33e ali je vazno da nakon razlomka ide BJELINA\"); \/\/neispravno\n     is.clear();\n     is >> r;\n     if (is.fail()) std::cout << \"OK, neispravno!\" << std::endl;\n     else std::cout << \"Nije OK! Ovo nije ispravan unos!\" << std::endl;\n\n     \/\/nije ispravno ni npr. 10b\/20, ni 10\/ 20 ni a20\/5\n     \/\/necu sve testirati (barem ne u javnim :troll:)\n\n     is.str (\"a17\/33\"); \/\/neispravno\n     is.clear();\n     is >> r;\n     if (is.fail()) std::cout << \"OK, neispravno!\" << std::endl;\n     else std::cout << \"Nije OK! Ovo nije ispravan unos!\" << std::endl;\n\n     std::cout << \"VEOMA VAZNO: \" << std::endl;\n     \/\/treba biti MOGUCE unijeti vise razlomaka odjednom! (pazite na std::ws)\n     is.str (\" 1\/3   5\/7  4\/2    nebitno\"); \/\/ispravna prva 3\n     is.clear();\n     is >> r >> q >> t;\n     std::cout << \"r = \" << r << \", q = \" << q << \", t = \" << t;\n\n     \/\/dosta testova :whew:\n    }",
+            "global_above_main": "#include <sstream>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\/2\\n173\\n173\/50\\n173\/50\\n173\/51\\nOK, neispravno!\\nOK, neispravno!\\nVEOMA VAZNO:\\nr = 1\/3, q = 5\/7, t = 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3839,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT4 (c9): operator >> (2\/3) (direktno iz std::cin)\n     \/\/NAPOMENA: pogledati AT3 za detaljna objasnjenja (i \\R znak je bjelina, malo 'r')\n        Razlomak r, p, q;\n        std::cin >> r; \/\/5\/17\n        std::cout << r << std::endl;\n        std::cin.clear(); std::cin.ignore (100, '\\n');\n        \/\/tri zaredom\n        std::cin >> r >> p >> q; \/\/10 20 30 -> 10\/1 20\/1 30\/1\n        std::cout << r << \" \" << p << \" \" << q << std::endl;\n        std::cin.clear(); std::cin.ignore (100, '\\n');\n        std::cin >> r;\n        std::cout << r;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\/17\n10 20 30\n15\/17\n"
+            },
+            "expected": [
+                "5\/17\\n10 20 30\\n15\/17"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3840,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT5 (c9): operator + (primjer iz postavke)\n        Razlomak r(2337, 3740), q (4014, 5225);\n        std::cout << r << \" + \" << q << \" = \" << r + q;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2337\/3740 + 4014\/5225 = 44997\/32300"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3841,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT6 (c9): [poucan]: op+, op*\n            Razlomak r = 10_r \/ 3_r; \/\/ 10\/3\n            Razlomak v = 10_r \/ 7_r; \/\/10\/7\n            std::cout << r * v << std::endl << r + v; \/\/isti rezultat, mnozenje, sbairanje\n        }",
+            "global_above_main": "\/\/da se malo igramo, da razlomke zadajemo u formatu: a \/ b.\n\/\/da bude moguce 'Razlomak r = a \/ b', gdje su 'a' i 'b' specijalni 'brojevi'\n\/\/mozemo nauciti 'user-defined' literale iako se na predavanjima ne rade\nstruct RazlomakBroj {long long int x; RazlomakBroj (long long int x) : x(x) {}};\nRazlomak operator \/ (const RazlomakBroj &b, const RazlomakBroj &n) { return {b.x, n.x};}\nRazlomakBroj operator \"\" _r (unsigned long long int x) { return RazlomakBroj(x);}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "100\/21\\n100\/21"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3842,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT7 (c9): op-, op\/, op konverzije, kracenje\n         \/\/za _r pogledati 'globalni opseg' komentar i AT6\n         std::cout << 10_r \/ 7_r - 6_r \/ 11_r; \/\/ 10\/7 - 6\/11\n         std::cout << std::endl;\n         std::cout << (10_r \/ 7_r) \/ (6_r \/ 11_r); \/\/ 10\/7 \/ 6\/11\n         std::cout << std::endl;\n         Razlomak r = 124_r \/ 4_r;\n         std::cout << r;\n         r = r - 11_r \/ 77_r;\n         std::cout << std::endl;\n         std::cout << r << \" je priblizno \" << static_cast<long double>(r);\n        }",
+            "global_above_main": "\/\/da se malo igramo, da razlomke zadajemo u formatu: a \/ b.\n\/\/da bude moguce 'Razlomak r = a \/ b', gdje su 'a' i 'b' specijalni 'brojevi'\n\/\/mozemo nauciti 'user-defined' literale iako se na predavanjima ne rade\nstruct RazlomakBroj {long long int x; RazlomakBroj (long long int x) : x(x) {}};\nRazlomak operator \/ (const RazlomakBroj &b, const RazlomakBroj &n) { return {b.x, n.x};}\nRazlomakBroj operator \"\" _r (unsigned long long int x) { return RazlomakBroj(x);}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "68\/77\\n55\/21\\n31\\n216\/7 je priblizno 30.8571"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

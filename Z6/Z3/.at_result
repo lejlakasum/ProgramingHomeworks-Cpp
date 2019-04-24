@@ -1,0 +1,285 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’:\nmain.cpp:364:32:   required from here\nmain.cpp:14:11: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]\n      char ime_matrice;\n           ^~~~~~~~~~~\nmain.cpp:13:14: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]\n      TipEl **elementi;\n              ^~~~~~~~\nmain.cpp:158:2: warning:   when initialized here [-Wreorder]\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nmain.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]’:\nmain.cpp:90:34:   required from ‘void Matrica<TipEl>::ObnoviIzBinarneDatoteke(std::__cxx11::string) [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’\nmain.cpp:371:39:   required from here\nmain.cpp:14:11: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]\n      char ime_matrice;\n           ^~~~~~~~~~~\nmain.cpp:13:14: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]\n      TipEl **elementi;\n              ^~~~~~~~\nmain.cpp:170:2: warning:   when initialized here [-Wreorder]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "14",
+                "col": "11",
+                "message": "'Matrica<double>::ime_matrice' will be initialized after",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:14:11: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]      char ime_matrice;           ^~~~~~~~~~~",
+                "code": "char ime_matrice;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "13",
+                "col": "14",
+                "message": "'double** Matrica<double>::elementi'",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:13:14: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]      TipEl **elementi;              ^~~~~~~~",
+                "code": "TipEl **elementi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "158",
+                "col": "2",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:158:2: warning:   when initialized here [-Wreorder]  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :  ^~~~~~~~~~~~~~/tmp/buildservice/bs_7669/main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]’:/tmp/buildservice/bs_7669/main.cpp:90:34:   required from ‘void Matrica<TipEl>::ObnoviIzBinarneDatoteke(std::__cxx11::string) [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’/tmp/buildservice/bs_7669/main.cpp:371:39:   required from here",
+                "code": "Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "14",
+                "col": "11",
+                "message": "'Matrica<double>::ime_matrice' will be initialized after",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:14:11: warning: ‘Matrica<double>::ime_matrice’ will be initialized after [-Wreorder]      char ime_matrice;           ^~~~~~~~~~~",
+                "code": "char ime_matrice;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "13",
+                "col": "14",
+                "message": "'double** Matrica<double>::elementi'",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:13:14: warning:   ‘double** Matrica<double>::elementi’ [-Wreorder]      TipEl **elementi;              ^~~~~~~~",
+                "code": "TipEl **elementi;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "170",
+                "col": "2",
+                "message": "when initialized here",
+                "output": "/tmp/buildservice/bs_7669/main.cpp:170:2: warning:   when initialized here [-Wreorder]  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),  ^~~~~~~~~~~~~~",
+                "code": "Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3927": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Trazena datoteka ne postoji\nIzuzetak: Trazena datoteka ne postoji\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3928": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3928.cpp: In function ‘int main()’:\nbs_test_3928.cpp:406:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"matrica.txt\", false);\n                                             ^\nbs_test_3928.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_3928.cpp:417:48: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<double> m1(\"matrica.txt\", false);\n                                                ^\nbs_test_3928.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "45",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3928.cpp:406:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"matrica.txt\", false);                                             ^",
+                        "code": "Matrica<int> m1(\"matrica.txt\", false);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 16,
+                        "col": "48",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3928.cpp:417:48: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<double> m1(\"matrica.txt\", false);                                                ^",
+                        "code": "Matrica<double> m1(\"matrica.txt\", false);"
+                    }
+                ]
+            }
+        },
+        "3929": {
+            "status": 1,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3930": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3930.cpp: In function ‘int main()’:\nbs_test_3930.cpp:423:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"matrica1.DAT\", true);\n                                             ^\nbs_test_3930.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_3930.cpp:436:48: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<double> m1(\"matrica2.DAT\", true);\n                                                ^\nbs_test_3930.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "45",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3930.cpp:423:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"matrica1.DAT\", true);                                             ^",
+                        "code": "Matrica<int> m1(\"matrica1.DAT\", true);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 19,
+                        "col": "48",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3930.cpp:436:48: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<double> m1(\"matrica2.DAT\", true);                                                ^",
+                        "code": "Matrica<double> m1(\"matrica2.DAT\", true);"
+                    }
+                ]
+            }
+        },
+        "3931": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3931.cpp: In function ‘int main()’:\nbs_test_3931.cpp:415:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"matrica1.DAT\", true);\n                                             ^\nbs_test_3931.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_3931.cpp:427:49: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<double> m1(\"matrica2.txt\", false);\n                                                 ^\nbs_test_3931.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "45",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3931.cpp:415:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"matrica1.DAT\", true);                                             ^",
+                        "code": "Matrica<int> m1(\"matrica1.DAT\", true);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 18,
+                        "col": "49",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3931.cpp:427:49: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<double> m1(\"matrica2.txt\", false);                                                 ^",
+                        "code": "Matrica<double> m1(\"matrica2.txt\", false);"
+                    }
+                ]
+            }
+        },
+        "3932": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3932.cpp: In function ‘int main()’:\nbs_test_3932.cpp:414:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"matrica1.DAT\", true);\n                                             ^\nbs_test_3932.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_3932.cpp:424:49: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<double> m1(\"matrica2.txt\", false);\n                                                 ^\nbs_test_3932.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "45",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3932.cpp:414:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"matrica1.DAT\", true);                                             ^",
+                        "code": "Matrica<int> m1(\"matrica1.DAT\", true);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "49",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3932.cpp:424:49: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<double> m1(\"matrica2.txt\", false);                                                 ^",
+                        "code": "Matrica<double> m1(\"matrica2.txt\", false);"
+                    }
+                ]
+            }
+        },
+        "3933": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3933.cpp: In function ‘int main()’:\nbs_test_3933.cpp:437:42: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n     Matrica<int> m1(\"matrica1.txt\", false);\n                                          ^\nbs_test_3933.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_3933.cpp:453:44: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n     Matrica<double> m2(\"matrica2.DAT\", true);\n                                            ^\nbs_test_3933.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = double]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "42",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3933.cpp:437:42: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]     Matrica<int> m1(\"matrica1.txt\", false);                                          ^",
+                        "code": "Matrica<int> m1(\"matrica1.txt\", false);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 22,
+                        "col": "44",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_3933.cpp:453:44: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]     Matrica<double> m2(\"matrica2.DAT\", true);                                            ^",
+                        "code": "Matrica<double> m2(\"matrica2.DAT\", true);"
+                    }
+                ]
+            }
+        },
+        "71234": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_71234.cpp: In function ‘int main()’:\nbs_test_71234.cpp:391:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"datoteka.DAT\", true);\n                                             ^\nbs_test_71234.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nbs_test_71234.cpp:400:46: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n         Matrica<int> m1(\"datoteka.txt\", false);\n                                              ^\nbs_test_71234.cpp:164:2: note:   initializing argument 1 of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "45",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_71234.cpp:391:45: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"datoteka.DAT\", true);                                             ^",
+                        "code": "Matrica<int> m1(\"datoteka.DAT\", true);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "46",
+                        "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_7669/bs_test_71234.cpp:400:46: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]         Matrica<int> m1(\"datoteka.txt\", false);                                              ^",
+                        "code": "Matrica<int> m1(\"datoteka.txt\", false);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 64,
+    "time": 1498509088
+}

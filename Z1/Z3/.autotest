@@ -1,0 +1,94 @@
+{
+    "id": 9103,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 1, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3238,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: oficijelni autotest koji predstavlja formalni ulaz\/izlaz za ovaj zadatak\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 1 2 3 4 3 2 1 2 3 4\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Maksimalni rastuci podnizovi: \\n1 2 3 4 \\n1 2 3 4 \\nMaksimalni opadajuci podnizovi: \\n4 3 2 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3244,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: test main funkcije\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "19 1 2 3 4 5 6 7 8 9 10 9 8 7 6 5 4 3 2 1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Maksimalni rastuci podnizovi: \\n1 2 3 4 5 6 7 8 9 10 \\nMaksimalni opadajuci podnizovi: \\n10 9 8 7 6 5 4 3 2 1 \\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3245,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: decimalni brojevi\n\n    std::vector<double> brojevi {0.1, 0.1, 0.1};\n    std::vector<std::vector<double>> rastuci {RastuciPodnizovi(brojevi)}, opadajuci {OpadajuciPodnizovi(brojevi)};\n\n    std::cout << \"Rastuci: \";\n    for (auto niz : rastuci)\n        for (auto broj : niz)\n            std::cout << std::setprecision(12) << broj << \" \";\n            \n    std::cout << \"Opadajuci: \";\n    for (auto niz : opadajuci)\n        for (auto broj : niz)\n            std::cout << std::setprecision(12) << broj << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <iomanip>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rastuci: 0.1 0.1 0.1 Opadajuci: 0.1 0.1 0.1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool JednakiDatumi(const Datum&, const Datum&)’:\nmain.cpp:27:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n     if(d1.dan==d2.dan && d1.mjesec==d2.mjesec && d1.godina==d2.godina) return true; return false;\n     ^~\nmain.cpp:27:85: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’\n     if(d1.dan==d2.dan && d1.mjesec==d2.mjesec && d1.godina==d2.godina) return true; return false;\n                                                                                     ^~~~~~\nmain.cpp: In member function ‘void Datum::Postavi(int, int, int)’:\nmain.cpp:32:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n     if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])\n     ^~\nmain.cpp:34:9: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’\n         dan=d; mjesec=m; godina=g;\n         ^~~\nmain.cpp: In function ‘bool JednakiKupci(const Kupac&, const Kupac&)’:\nmain.cpp:64:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n     if(k1.ime_i_prezime!=k2.ime_i_prezime || !JednakiDatumi(k1.datum_rodjenja, k2.datum_rodjenja)) return false; return true;\n     ^~\nmain.cpp:64:114: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’\n     if(k1.ime_i_prezime!=k2.ime_i_prezime || !JednakiDatumi(k1.datum_rodjenja, k2.datum_rodjenja)) return false; return true;\n                                                                                                                  ^~~~~~\nmain.cpp: In function ‘bool JednakoStanovi(const Stan&, const Stan&)’:\nmain.cpp:92:132: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(s1.adresa!=s2.adresa || s1.sprat!=s2.sprat || s1.broj_soba!=s2.broj_soba || s1.namjesten!=s2.namjesten || s1.kvadratura!=s2.kvadratura)\n                                                                                                                                    ^~~~~~~~~~\nmain.cpp: In function ‘bool JednakeProdaje(const Prodaja&, const Prodaja&)’:\nmain.cpp:153:76: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(p1.ime_agenta_prodaje!=p2.ime_agenta_prodaje || p1.cijena_stana!=p2.cijena_stana || !JednakiDatumi(p1.datum_prodaje, p2.datum_prodaje)\n                                                                            ^~~~~~~~~~~~\nmain.cpp: In member function ‘Prodaja& Prodaje::DajProdaju(int)’:\nmain.cpp:275:1: warning: control reaches end of non-void function [-Wreturn-type]\n }\n ^\nmain.cpp: In function ‘void UredjivanjeStanova(std::vector<Stan>&)’:\nmain.cpp:621:76: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             Stan privremeni(adresa, sprat, broj_soba, namjesten, kvadratura);\n                                                                            ^\nmain.cpp: In function ‘void DodavanjeStana(std::vector<Stan>&)’:\nmain.cpp:81:91: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n         Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;\n                                                                            ~~~~~~~~~~~~~~~^~~~~~~~~~\nmain.cpp:438:10: note: ‘namjesten’ was declared here\n     bool namjesten;\n          ^~~~~~~~~\nmain.cpp: In function ‘bool DodavanjeProdaje(Prodaje&, std::vector<Stan>&, std::vector<Kupac>&)’:\nmain.cpp:81:91: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n         Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;\n                                                                            ~~~~~~~~~~~~~~~^~~~~~~~~~\nmain.cpp:790:18: note: ‘namjesten’ was declared here\n             bool namjesten, unos_zavrsen;\n                  ^~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "27",
+                "col": "5",
+                "message": "this 'if' clause does not guard...",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:27:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]     if(d1.dan==d2.dan && d1.mjesec==d2.mjesec && d1.godina==d2.godina) return true; return false;     ^~",
+                "code": "if(d1.dan==d2.dan && d1.mjesec==d2.mjesec && d1.godina==d2.godina) return true; return false;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "32",
+                "col": "5",
+                "message": "this 'if' clause does not guard...",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:32:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]     if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])     ^~",
+                "code": "if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "64",
+                "col": "5",
+                "message": "this 'if' clause does not guard...",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:64:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]     if(k1.ime_i_prezime!=k2.ime_i_prezime || !JednakiDatumi(k1.datum_rodjenja, k2.datum_rodjenja)) return false; return true;     ^~",
+                "code": "if(k1.ime_i_prezime!=k2.ime_i_prezime || !JednakiDatumi(k1.datum_rodjenja, k2.datum_rodjenja)) return false; return true;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "92",
+                "col": "132",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:92:132: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(s1.adresa!=s2.adresa || s1.sprat!=s2.sprat || s1.broj_soba!=s2.broj_soba || s1.namjesten!=s2.namjesten || s1.kvadratura!=s2.kvadratura)                                                                                                                                    ^~~~~~~~~~",
+                "code": "if(s1.adresa!=s2.adresa || s1.sprat!=s2.sprat || s1.broj_soba!=s2.broj_soba || s1.namjesten!=s2.namjesten || s1.kvadratura!=s2.kvadratura)"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "153",
+                "col": "76",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:153:76: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(p1.ime_agenta_prodaje!=p2.ime_agenta_prodaje || p1.cijena_stana!=p2.cijena_stana || !JednakiDatumi(p1.datum_prodaje, p2.datum_prodaje)                                                                            ^~~~~~~~~~~~/tmp/buildservice/bs_9321/main.cpp: In member function ‘Prodaja& Prodaje::DajProdaju(int)’:",
+                "code": "if(p1.ime_agenta_prodaje!=p2.ime_agenta_prodaje || p1.cijena_stana!=p2.cijena_stana || !JednakiDatumi(p1.datum_prodaje, p2.datum_prodaje)"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "275",
+                "col": "1",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:275:1: warning: control reaches end of non-void function [-Wreturn-type] } ^",
+                "code": "}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "621",
+                "col": "76",
+                "message": "'namjesten' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:621:76: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]             Stan privremeni(adresa, sprat, broj_soba, namjesten, kvadratura);                                                                            ^",
+                "code": "Stan privremeni(adresa, sprat, broj_soba, namjesten, kvadratura);"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "81",
+                "col": "91",
+                "message": "'namjesten' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:81:91: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]         Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;                                                                            ~~~~~~~~~~~~~~~^~~~~~~~~~",
+                "code": "Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "81",
+                "col": "91",
+                "message": "'namjesten' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_9321/main.cpp:81:91: warning: ‘namjesten’ may be used uninitialized in this function [-Wmaybe-uninitialized]         Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;                                                                            ~~~~~~~~~~~~~~~^~~~~~~~~~",
+                "code": "Stan::adresa=adresa; Stan::sprat=sprat; Stan::broj_soba=broj_soba; Stan::namjesten=namjesten; Stan::kvadratura=kvadratura;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3694": {
+            "status": 1,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1496743002
+}

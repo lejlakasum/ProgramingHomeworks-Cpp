@@ -1,0 +1,106 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘void Datum::Postavi(int, int, int)’:\nmain.cpp:20:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n     if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])\n     ^~\nmain.cpp:22:9: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’\n         dan=d; mjesec=m; godina=g;\n         ^~~\nmain.cpp: In constructor ‘GradjaninBiH::GradjaninBiH(std::__cxx11::string, int, int, int, int, GradjaninBiH::Pol)’:\nmain.cpp:123:16: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]\n           else if(Posljednji_kreirani!=nullptr)\n                ^~\nmain.cpp:126:13: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘if’\n             Posljednji_kreirani=this;\n             ^~~~~~~~~~~~~~~~~~~\nmain.cpp: In function ‘int main()’:\nmain.cpp:120:29: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n            GradjaninBiH::pol=pol;\n            ~~~~~~~~~~~~~~~~~^~~~\nmain.cpp:211:23: note: ‘p’ was declared here\n     GradjaninBiH::Pol p;\n                       ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "20",
+                "col": "5",
+                "message": "this 'if' clause does not guard...",
+                "output": "/tmp/buildservice/bs_900/main.cpp:20:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]     if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])     ^~",
+                "code": "if(g<1 || m<1 || d<1 || m>12 || d>broj_dana[m-1])"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "123",
+                "col": "16",
+                "message": "this 'if' clause does not guard...",
+                "output": "/tmp/buildservice/bs_900/main.cpp:123:16: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]           else if(Posljednji_kreirani!=nullptr)                ^~",
+                "code": "else if(Posljednji_kreirani!=nullptr)"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "120",
+                "col": "29",
+                "message": "'p' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_900/main.cpp:120:29: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]            GradjaninBiH::pol=pol;            ~~~~~~~~~~~~~~~~~^~~~",
+                "code": "GradjaninBiH::pol=pol;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3769": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko gradjana zelite unijeti po JMBG? \nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Murga Drot rodjenog 30.5.2017 u regiji 18, musko.\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Gile Sampion rodjenog 29.5.2017 u regiji 17, musko.\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nJMBG nije validan\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Selena VratiSe rodjenog 16.12.1994 u regiji 17, zensko.\nKoliko gradjana zelite unijeti po datumu rodjenja, regiji i polu? \nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Ibro Dirka JMBG: 1612994170006.\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Lijepa Alma JMBG: 1412994185004.\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nNeispravni podaci\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Abid ReciNamde JMBG: 1212992170000.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3770": {
+            "status": 1,
+            "run_result": {
+                "output": "12/12/1992\n17\n0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3771": {
+            "status": 1,
+            "run_result": {
+                "output": "1212992170000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3772": {
+            "status": 1,
+            "run_result": {
+                "output": "Gile Hasisar\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1496742947
+}

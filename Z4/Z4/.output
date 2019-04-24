@@ -1,0 +1,144 @@
+Dobrodosli!
+
+
+Izaberite opciju:
+ 0 - kraj
+ 1 - uredjivanje stanova
+ 2 - uredjivanje kupaca
+ 3 - uredjivanje prodaja
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje stana
+ 2 - uredjivanje stanova
+ 3 - ispis svih stanova
+ 4 - kraj
+Unesite adresu: Unesite sprat: Unesite broj soba: Da li je stan namjesten (1 - da, 0 - ne): Unesite kvadraturu: Stan je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje stana
+ 2 - uredjivanje stanova
+ 3 - ispis svih stanova
+ 4 - kraj
+Unesite adresu: Unesite sprat: Unesite broj soba: Da li je stan namjesten (1 - da, 0 - ne): Unesite kvadraturu: Stan je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje stana
+ 2 - uredjivanje stanova
+ 3 - ispis svih stanova
+ 4 - kraj
+Unesite adresu: Unesite sprat: Unesite broj soba: Da li je stan namjesten (1 - da, 0 - ne): Unesite kvadraturu: Stan je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje stana
+ 2 - uredjivanje stanova
+ 3 - ispis svih stanova
+ 4 - kraj
+
+Izaberite opciju:
+ 0 - kraj
+ 1 - uredjivanje stanova
+ 2 - uredjivanje kupaca
+ 3 - uredjivanje prodaja
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje kupca
+ 2 - uredjivanje kupaca
+ 3 - ispis svih kupaca
+ 4 - kraj
+Unesite ime i prezime kupca: Unesite datum rodjenja (formata d/m/g): Kupac je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje kupca
+ 2 - uredjivanje kupaca
+ 3 - ispis svih kupaca
+ 4 - kraj
+Unesite ime i prezime kupca: Unesite datum rodjenja (formata d/m/g): Kupac je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje kupca
+ 2 - uredjivanje kupaca
+ 3 - ispis svih kupaca
+ 4 - kraj
+Unesite ime i prezime kupca: Unesite datum rodjenja (formata d/m/g): Kupac je uspjesno dodan!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje kupca
+ 2 - uredjivanje kupaca
+ 3 - ispis svih kupaca
+ 4 - kraj
+
+Izaberite opciju:
+ 0 - kraj
+ 1 - uredjivanje stanova
+ 2 - uredjivanje kupaca
+ 3 - uredjivanje prodaja
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje prodaje
+ 2 - uredjivanje prodaje
+ 3 - ispis prodaja
+ 4 - brisanje prodaja
+ 5 - kraj
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje potpuno nove prodaje
+ 2 - dodavanje nove prodaje na osnovu arhive
+ 3 - kraj
+Unesite ime i prezime agenta prodaje: Unesite datum prodaje (formata d/m/g): Unesite cijenu stana: Unesite ime kupca: Unesite datum rodjenja kupca (formata d/m/g): Unesite adresu: Unesite sprat: Unesite broj soba: Da li je stan namjesten (1 - da, 0 - ne): Unesite kvadraturu: Prodaja uspjesno dodana!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje potpuno nove prodaje
+ 2 - dodavanje nove prodaje na osnovu arhive
+ 3 - kraj
+Unesite ime i prezime agenta prodaje: Unesite datum prodaje (formata d/m/g): Unesite cijenu stana: Unesite ime kupca: Unesite datum rodjenja kupca (formata d/m/g): Unesite adresu: Unesite sprat: Unesite broj soba: Da li je stan namjesten (1 - da, 0 - ne): Unesite kvadraturu: Prodaja uspjesno dodana!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje potpuno nove prodaje
+ 2 - dodavanje nove prodaje na osnovu arhive
+ 3 - kraj
+Unesite ime i prezime agenta prodaje: Unesite datum prodaje (formata d/m/g): Unesite cijenu stana: Odaberite kupca. Dostupni kupci su:
+ 1 - Niko Nikic (14/8/1981)
+ 2 - Mujo Mujic (13/5/1976)
+ 3 - Ana Anic (11/8/1993)
+ 4 - Neko Nekic (19/3/1988)
+ 5 - Marko Markovic (17/4/1977)
+Odaberite stan. Dostupni stanovi su:
+ 1 - Stan se nalazi na adresi Zagrebacka 6 na 2. spratu i ima 6 soba. Kvadratura stana je 106.7 (m^2) i stan je namjesten.
+ 2 - Stan se nalazi na adresi Lozionicka 15 na 2. spratu i ima 3 sobe. Kvadratura stana je 88.2 (m^2) i stan nije namjesten.
+ 3 - Stan se nalazi na adresi Alije Nametka 17 na 1. spratu i ima 4 sobe. Kvadratura stana je 102.98 (m^2) i stan je namjesten.
+ 4 - Stan se nalazi na adresi Hamdije Cemerlica 14 na 3. spratu i ima 4 sobe. Kvadratura stana je 87.9 (m^2) i stan je namjesten.
+ 5 - Stan se nalazi na adresi Stupsko brdo 19 na 5. spratu i ima 6 soba. Kvadratura stana je 128.79 (m^2) i stan je namjesten.
+Prodaja uspjesno dodana!
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje potpuno nove prodaje
+ 2 - dodavanje nove prodaje na osnovu arhive
+ 3 - kraj
+
+Izaberite opciju:
+ 0 - nazad
+ 1 - dodavanje prodaje
+ 2 - uredjivanje prodaje
+ 3 - ispis prodaja
+ 4 - brisanje prodaja
+ 5 - kraj
+
+Izaberite opciju:
+ 0 - kraj
+ 1 - uredjivanje stanova
+ 2 - uredjivanje kupaca
+ 3 - uredjivanje prodaja
+Dovidjenja!

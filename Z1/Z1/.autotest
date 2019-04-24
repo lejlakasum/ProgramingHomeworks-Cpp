@@ -1,0 +1,119 @@
+{
+    "test_specifications": [
+        {
+            "id": 1203,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: oficijelni autotest koji predstavlja formalni ulaz\/izlaz za ovaj zadatak\n\/\/NAPOMENA: ostali javni autotestovi su na zamgeru. Posaljite zadacu, sacekajte autotestiranje,\n\/\/pa onda provjerite rezultat.\n\n\/*\n    Autotestove za ovaj zadatak (ukljucujuci i one na zamgeru) pisao\n    Enil Pajic. Sva pitanja i prijave gresaka mozete poslati na mail:\n    epajic1@etf.unsa.ba\n    Ili me potraziti na etf.ba pod nickom 'eon'\n*\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "56 656 20 61 552 -6384 223 8979 80812 26937 240801 15 3608 5904 56 656 20 61 552 -6384 223 0\n"
+            },
+            "expected": [
+                "Unesite brojeve (0 za prekid unosa): Opaki: 56 656 552 -6384 3608 5904 \\nOdvratni: 223 8979 15 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1204,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 (c9): opaki brojevi + negativni + duplikati\nfor (const auto &a : IzdvojiGadne({56, 656, 20, 61, 552, -6384, 223, 8979, 5904,56, 656, 20, 61, 552, 6384, 223}, true))\n\tstd::cout << a << \" \";\n\/\/56 656 552 -6384 5904 6384",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "56 656 552 -6384 5904 6384"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1205,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 (c9): odvratni brojevi + negativni + duplikati\nfor (const auto &a : IzdvojiGadne({56, 656, 20, 61, 552, -6384, 223, 8979, 5904, 56, 656, 20, 61, 552, 6384, 223}, false))\n    std::cout << a << \" \";\n\/\/223 8979     ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "223 8979"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1206,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\n\/\/AT8 (c9): mijesano sve (negativni + opaki + odvratni + niti jedni)\n\/\/OSTALI (javni) autotestovi su na Zamgeru! Posaljite zadacu, sacekajte\n\/\/da se pokrenu autotestovi (ujutro oko 5-6h) pa provjerite rezultat (kroz zamger).\n\/\/Ako autotest pada onda SAMI testirajte program tako sto cete kopirati kod\n\/\/autotesta u svoj main (mozete svoj main preimenovati u main1, a kreirati\n\/\/novi main pa u njega staviti kod autotesta) i onda popravljajte program!\n\nstd::vector<int> v = {\n\t136, 123, 12, 1212, 10102, 10012, 1000, 608, 2613, -608, 333,\n\t333, 333, 333, 333, 333, 1000, -15, 60, 61, 15, 151, 16, 715, 7222,\n};\nauto opaki = IzdvojiGadne(v, true), odvratni = IzdvojiGadne(v, false);\nstd::cout << \"Opaki: \";\nfor (const auto &x : opaki) std::cout << x << \" \";\nstd::cout << std::endl << \"Odvratni: \";\nfor (const auto &x : odvratni) std::cout << x << \" \";\n\/\/Opaki: 608 -608 60 \n\/\/Odvratni: 123 333 -15 15 715\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Opaki: 608 -608 60 \\nOdvratni: 123 333 -15 15 715"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ],
+    "id": 9101,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 1, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true"
+}

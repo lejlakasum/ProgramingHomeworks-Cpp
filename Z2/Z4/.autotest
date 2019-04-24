@@ -1,0 +1,94 @@
+{
+    "id": 9114,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 2, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3450,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - oficijelna definicija main-a\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\nPero\nFudo\nMeho\n1\nBajro\t\n2\nMeho\n3\n0"
+            },
+            "expected": [
+                "Koliko potencijalnih krivaca zelite unijeti? \\nUnesite potencijalne krivce: \\nOdaberite opciju: 1 za unos novog optuzenog, 2 za brisanje nekog optuzenog 3 za izlistavanje optuzenih, 0 za kraj: \\nUnesite ime novog optuzenog: \\nOdaberite opciju: 1 za unos novog optuzenog, 2 za brisanje nekog optuzenog 3 za izlistavanje optuzenih, 0 za kraj: \\nUnesite ime koje zelite izbaciti: \\nOdaberite opciju: 1 za unos novog optuzenog, 2 za brisanje nekog optuzenog 3 za izlistavanje optuzenih, 0 za kraj: \\nPero\\nFudo\\nBajro\\nOdaberite opciju: 1 za unos novog optuzenog, 2 za brisanje nekog optuzenog 3 za izlistavanje optuzenih, 0 za kraj: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3453,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 (c9) funkcija PotencijalniKrivci i IzlistajOptuzbu\n  char **nizPotencijalnih;\n  std::vector<std::string> imena = {\"Fudo\", \"Pero\", \"Meho\", \"Fata\", \"Bajro\", \"Luca\", \"Jovo\"};\n  int n = PotencijalniKrivci( nizPotencijalnih, imena);\n  IzlistajOptuzbu(nizPotencijalnih, n);\n  dealociraj(nizPotencijalnih, n);",
+            "global_above_main": "void dealociraj(char **mat, int n){\n  for(int i = 0; i < n; i++) delete[] mat[i];\n    delete[] mat;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Fudo\\nPero\\nMeho\\nFata\\nBajro\\nLuca\\nJovo"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3454,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 (c9)- da li je korektno izbacivanje:\n char **nizPotencijalnih;\n  std::vector<std::string> imena = {\"Fudo\", \"Pero\", \"Meho\", \"Fata\", \"Bajro\", \"Luca\", \"Jovo\"};\n  int n = PotencijalniKrivci( nizPotencijalnih, imena);\n  int m = OdbaciOptuzbu(nizPotencijalnih, n, \"Fata\");\n  std::cout << m << std::endl;\n  dealociraj(nizPotencijalnih, n);",
+            "global_above_main": "void dealociraj(char **mat, int n){\n  for(int i = 0; i < n; i++) delete[] mat[i];\n    delete[] mat;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

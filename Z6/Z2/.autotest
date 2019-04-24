@@ -1,0 +1,165 @@
+{
+	"id": 1004,
+	"name": "Tehnike programiranja (2016\/2017), Zadaca 6, Zadatak 2v3",
+	"language": "C++",
+	"required_compiler": "g++",
+	"preferred_compiler": "g++",
+	"compiler_features": [],
+	"compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+	"compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+	"compile": "true",
+	"run": "false",
+	"test": "true",
+	"debug": "true",
+	"profile": "true",
+
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\ttry\n    {\n\n        PolimorfniSpremnik s1(Bure(5,\"Benzin\", 930, 70));\n        PolimorfniSpremnik s2, s3, s4;\n        s2 = Sanduk(3, \"Tepsije\", {0.5, 0.8, 0.6, 0.5});\n        s3 = Vreca(0.1, \"Patak\", 15.5);\n        std::cout << s1.DajTezinu() << std::endl;\n        std::cout << s2.DajUkupnuTezinu() << std::endl;\n        s3.Ispisi();\n        s1 = s2;\n        s1.Ispisi();\n        s4.DajTezinu();\n    }\n    catch(std::logic_error le)\n    {\n        std::cout << le.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5\\n5.4\\nVrsta spremnika: Vreca\\nSadrzaj: Patak\\nVlastita tezina: 0.1 (kg)\\nTezina pohranjene materije: 15.5 (kg)\\nUkupna tezina: 15.6 (kg)\\nVrsta spremnika: Sanduk\\nSadrzaj: Tepsije\\nTezine predmeta: 0.5 0.8 0.6 0.5 (kg)\\nVlastita tezina: 3 (kg)\\nUkupna tezina: 5.4 (kg)\\nNespecificiran spremnik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n\n\tPolimorfniSpremnik s1;\n\tstd::cout << s1.DajTezinu() << std::endl;\n}\ncatch(std::logic_error le)\n{\n\tstd::cout << le.what();\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nespecificiran spremnik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "PolimorfniSpremnik s1(Bure(20,\"Red Bull\", 800, 150));\nPolimorfniSpremnik s2;\ns2 = Vreca(0.5, \"Zito\", 50);\ns1.Ispisi();\ns2.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Bure\\nSadrzaj: Red Bull\\nVlastita tezina: 20 (kg)\\nSpecificna tezina tecnosti: 800 (kg\/m^3)\\nZapremina tecnosti: 150 (l)\\nUkupna tezina: 140 (kg)\\nVrsta spremnika: Vreca\\nSadrzaj: Zito\\nVlastita tezina: 0.5 (kg)\\nTezina pohranjene materije: 50 (kg)\\nUkupna tezina: 50.5 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "PolimorfniSpremnik s1(Bure(20,\"Red Bull\", 800, 150));\nPolimorfniSpremnik s2(s1);\nPolimorfniSpremnik s3;\ns3=s2;\ns3.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Bure\\nSadrzaj: Red Bull\\nVlastita tezina: 20 (kg)\\nSpecificna tezina tecnosti: 800 (kg\/m^3)\\nZapremina tecnosti: 150 (l)\\nUkupna tezina: 140 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n\n\tPolimorfniSpremnik s1;\n\tstd::cout << s1.DajUkupnuTezinu() << std::endl;\n}\ncatch(std::logic_error le)\n{\n\tstd::cout << le.what();\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nespecificiran spremnik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n\n\tPolimorfniSpremnik s1;\n\ts1.Ispisi();\n}\ncatch(std::logic_error le)\n{\n\tstd::cout << le.what();\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nespecificiran spremnik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "PolimorfniSpremnik s1(Sanduk(3, \"Svicevi :D\", {5, 2, 3, 1, 7, 8}));\nstd::cout << s1.DajTezinu()  << std::endl << s1.DajUkupnuTezinu() << std::endl;\ns1.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3\\n29\\nVrsta spremnika: Sanduk\\nSadrzaj: Svicevi :D\\nTezine predmeta: 5 2 3 1 7 8 (kg)\\nVlastita tezina: 3 (kg)\\nUkupna tezina: 29 (kg)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

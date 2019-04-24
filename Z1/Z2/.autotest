@@ -1,0 +1,219 @@
+{
+    "id": 9102,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 1, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3218,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: primjer iz postavke\n\/\/NAPOMENA: ovaj autotest definise FORMALNI dijalog sa korisnikom\n\/\/          te su ovi autotestovi DODEFINICIJA postavke!\n\/\/Ispis je na 4 mjesta sirine\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 3\n1 2 3\n4 5 6\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m n): Unesite elemente matrice:\\nRezultantna matrica:\\n   6   5   4   4   5   6   6   5   4\\n   3   2   1   1   2   3   3   2   1\\n   3   2   1   1   2   3   3   2   1\\n   6   5   4   4   5   6   6   5   4\\n   6   5   4   4   5   6   6   5   4\\n   3   2   1   1   2   3   3   2   1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3219,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: u mainu, za negativne brojeve treba ispisati gresku\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-4 5"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m n): Dimenzije matrice moraju biti nenegativne!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3220,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: za 0 0 matricu - nema matrice za ispisati\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0 0\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m n): Unesite elemente matrice:\\nRezultantna matrica: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3221,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: isto i za mx0 matricu, treba samo ispisati m praznih redova\n\/\/napomena: ispis \"Kraj matrice\" je sastavni dio autotesta\n_main();\nstd::cout << \"Kraj matrice\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 0\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m n): Unesite elemente matrice:\\nRezultantna matrica: \\n\\n\\n\\n\\n\\n\\n\\n\\n\\nKraj matrice"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3222,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: poziv funkcije sa 1x1 matricom\nauto m = OgledaloMatrica ({{7}});\nfor (const auto &red : m)\n\t{\n\t\tfor (const auto &i : red)\n\t\t\tstd::cout << i << \" \";\n\t\tstd::cout << std::endl;\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7 7 7 \\n7 7 7 \\n7 7 7 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3223,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: main sa trocifrenim i negativnim brojevima\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 2\n123 321\n-12 0\n456 -7\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m n): Unesite elemente matrice:\\nRezultantna matrica: \\n  -7 456 456  -7  -7 456\\n   0 -12 -12   0   0 -12\\n 321 123 123 321 321 123\\n 321 123 123 321 321 123\\n   0 -12 -12   0   0 -12\\n  -7 456 456  -7  -7 456\\n  -7 456 456  -7  -7 456\\n   0 -12 -12   0   0 -12\\n 321 123 123 321 321 123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3224,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: (1) 1x6 matrica\n\/\/     (2) 7x1 matrica\nauto m1 = OgledaloMatrica ({{0, 1, 2, 3, 4, 5}});\nfor (const auto &red : m1)\n\t{\n\t\tfor (const auto &i : red)\n\t\t\tstd::cout << i << \" \";\n\t\tstd::cout << std::endl;\n\t}\nstd::cout << std::endl;\nauto m2 = OgledaloMatrica ({{0}, {1}, {2}, {3}, {4}, {5}, {7}});\nfor (const auto &red : m2)\n\t{\n\t\tfor (const auto &i : red)\n\t\t\tstd::cout << i << \" \";\n\t\tstd::cout << std::endl;\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 4 3 2 1 0 0 1 2 3 4 5 5 4 3 2 1 0 \\n5 4 3 2 1 0 0 1 2 3 4 5 5 4 3 2 1 0 \\n5 4 3 2 1 0 0 1 2 3 4 5 5 4 3 2 1 0 \\n\\n7 7 7 \\n5 5 5 \\n4 4 4 \\n3 3 3 \\n2 2 2 \\n1 1 1 \\n0 0 0 \\n0 0 0 \\n1 1 1 \\n2 2 2 \\n3 3 3 \\n4 4 4 \\n5 5 5 \\n7 7 7 \\n7 7 7 \\n5 5 5 \\n4 4 4 \\n3 3 3 \\n2 2 2 \\n1 1 1 \\n0 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3225,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: (1) 0x0 matrica\n\/\/     (2) 9x0 matrica\nauto m1 = OgledaloMatrica ({});\nauto m2 = OgledaloMatrica ({{}, {}, {}, {}});\nstd::cout << \"m1.size(): \" << m1.size() << std::endl;\nstd::cout << \"m2.size(): \" << m2.size() << std::endl;\nfor (int i = 0; i < m2.size(); ++i)\n\tstd::cout << \"m2.at(\" << i << \").size(): \" << m2.at(i).size() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "m1.size(): 0\\nm2.size(): 12\\nm2.at(0).size(): 0\\nm2.at(1).size(): 0\\nm2.at(2).size(): 0\\nm2.at(3).size(): 0\\nm2.at(4).size(): 0\\nm2.at(5).size(): 0\\nm2.at(6).size(): 0\\nm2.at(7).size(): 0\\nm2.at(8).size(): 0\\nm2.at(9).size(): 0\\nm2.at(10).size(): 0\\nm2.at(11).size(): 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

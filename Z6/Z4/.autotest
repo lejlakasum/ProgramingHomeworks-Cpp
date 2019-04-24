@@ -1,0 +1,59 @@
+{
+	"id": 11004,
+	"name": "Tehnike programiranja (2016\/2017), Zadaca 6, Zadatak 4",
+	"language": "C++",
+	"required_compiler": "g++",
+	"preferred_compiler": "g++",
+	"compiler_features": [],
+	"compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+	"compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+	"compile": "true",
+	"run": "false",
+	"test": "true",
+	"debug": "true",
+	"profile": "true",
+    "test_specifications": [
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1, sortiranje, x > y\n\/\/ne zaboravite ukljuciti <functional>, mora po postavci (less)\n\/\/NOTE, bit ce ukupno 12 testova u zadatku (svaki po 0.1p)\nstd::ofstream fo (\"dat.bin\", std::ios::binary);\nfor (long long int i = 5; i <= 40; ++i)\n    fo.write ((char *)&i, sizeof i);\nfo.close();\nSortirajBinarnuDatoteku<long long int> (\"dat.bin\", std::greater<long long int>());\nstd::ifstream fi (\"dat.bin\", std::ios::binary);\nlong long int p = -1;\nwhile (fi.read ((char *)&p, sizeof p)) std::cout << p << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2: podrazumijevani parametar (std::less)\nstd::ofstream fo (\"dat.bin\", std::ios::binary);\nfor (long long int i = 151; i > 81; i -= 2)\n    fo.write ((char *)&i, sizeof i);\nfo.close();\nSortirajBinarnuDatoteku<long long int> (\"dat.bin\");\nstd::ifstream fi (\"dat.bin\", std::ios::binary);\nlong long int p = -1;\nwhile (fi.read ((char *)&p, sizeof p)) std::cout << p << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "83 85 87 89 91 93 95 97 99 101 103 105 107 109 111 113 115 117 119 121 123 125 127 129 131 133 135 137 139 141 143 145 147 149 151"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

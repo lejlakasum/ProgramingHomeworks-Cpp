@@ -1,0 +1,7 @@
+/rhome/l/lkasum1/workspace/TP/Z3/Z1/main.cpp:15:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+            if(cvorovi[i].first==cvorovi[j].first)
+               ~~~~~~~~~~~~~~~~^ ~~~~~~~~~~~~~~~~
+/rhome/l/lkasum1/workspace/TP/Z3/Z1/main.cpp:48:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+            if(x==cvorovi[i].first) return cvorovi[i].second;
+               ~^ ~~~~~~~~~~~~~~~~
+2 warnings generated.

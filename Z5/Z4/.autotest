@@ -1,0 +1,194 @@
+{
+    "id": 10004,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 5, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 71234,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/konstruktori, DajBrojKolona, DajBrojRedova\n\n   GMatrica<int> m1;\n   std::cout << m1.DajBrojKolona() <<\",\" <<m1.DajBrojRedova() << std::endl;\n   \n   \n   GMatrica<int> m2({{1, 2}, {3, 4}});\n   std::cout << m2.DajBrojKolona() <<\",\" <<m2.DajBrojRedova() << std::endl;\n   \n   GMatrica<int> m3{{1, 2}, {3, 4}};\n   std::cout << m3.DajBrojKolona() <<\",\" <<m3.DajBrojRedova() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0,0\\n2,2\\n2,2\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3843,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \n   \/\/operator+ i operator- i <<\n   \n   GMatrica<double> m1({{1, 2}, {3, 4}});\n   GMatrica<double> m2({{1, 2}, {3, 4}});\n   auto m3 = m1 + m2;\n   std::cout << m3 << std::endl;\n   GMatrica<double> m4({{1, 2}, {3, 4}});\n   auto m5 = m3-m4;\n   std::cout << m5 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     2     4\\n     6     8\\n\\n     1     2\\n     3     4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3844,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   \/\/operator* i <<\n   \n   GMatrica<int> m1({{1, 2}, {3, 4}});\n   GMatrica<int> m2 = m1 * 2;\n   GMatrica<int> m3 = 2 * m1;  \n   std::cout <<  m2 << std::endl;\n   std::cout << m3 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     2     4\\n     6     8\\n\\n     2     4\\n     6     8\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3845,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   \/\/binarni operatori += -= *=\n   \n   GMatrica<int> m1({{1, 2}, {3, 4}});\n   GMatrica<int> m2({{1, 2}, {3, 4}});\n   std::cout <<  m1 << std::endl;\n   m1 += m2;\n   std::cout <<  m1 << std::endl;\n   m1 -= m2;\n   std::cout <<  m1 << std::endl;\n   m1 *= 2;\n   std::cout <<  m1 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     1     2\\n     3     4\\n\\n     2     4\\n     6     8\\n\\n     1     2\\n     3     4\\n\\n     2     4\\n     6     8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3846,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \n   \/\/operatori == i !=\n   \n   GMatrica<int> m1({{1, 2}, {3, 4}});\n   GMatrica<int> m2({{1, 2}, {3, 4}});\n   GMatrica<int> m3({{1, 2}, {3, 5}});\n   if(m1 == m2 && m1 != m3 && !(m1 != m2) && !(m1 != m2)) std::cout << \"OK\" << std::endl;\n   else std::cout << \"NOK\" << std::endl;\n   \n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3847,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   \/\/operatori {} i []\n   \n   GMatrica<int> m1({{1, 2}, {3, 4}});\n   std::cout << m1(1,1) << std::endl;\n   std::cout << m1[1][1] << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3848,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \n   \/\/operatori << i >>\n   \n   GMatrica<int> m1;\n   std::cin >> m1;\n   std::cout << m1 << std::endl;\n  \n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "[1,2;3,4]\n"
+            },
+            "expected": [
+                "     1     2\\n     3     4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

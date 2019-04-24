@@ -1,0 +1,219 @@
+{
+    "id": 9113,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 2, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3463,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - testiranje main-a (uz ispravke gre\u0161kica iz postavke zadatka)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 15 16 17 12 13 14 15 99 8 31 51 91 71 21 51 23 24 22\n"
+            },
+            "expected": [
+                "Unesite broj elemenata prvog kontejnera: Unesite elemente prvog kontejnera: Unesite broj elemenata drugog kontejnera: Unesite elemente drugog kontejnera: Uvrnuti presjek kontejnera:\\n    12     21      3 \\n    13     22      4 \\n    13     31      4 \\n    14     23      5 \\n    15     24      6 \\n    15     51      6 \\n    17     71      8 \\nUvrnuta razlika kontejnera:\\n    99      3 \\n    12      3 \\nDovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3464,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - testiranje main-a (uz ispravke gre\u0161kica iz postavke zadatka)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 21 33 66 97 12 14 82 7 22 71 50 93 55 12 60\n"
+            },
+            "expected": [
+                "Unesite broj elemenata prvog kontejnera: Unesite elemente prvog kontejnera: Unesite broj elemenata drugog kontejnera: Unesite elemente drugog kontejnera: Uvrnuti presjek kontejnera:\\n    12     12      3 \\n    21     12      3 \\n    14     50      5 \\n    33     60      6 \\n    82     55     10 \\n    66     93     12 \\nUvrnuta razlika kontejnera:\\n    60      4 \\nDovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3465,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - testiranje main-a\n\/\/Ponavljanja elemenata ne smije biti samo u skupovima individualno,\n\/\/sto ne znaci da se neki element ne smije naci i u jednom i drugom skupu.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 21 1 33 66 97 12 14 82 666 1 95 11 48 71 50 59 93 99 55 12 60 1 21"
+            },
+            "expected": [
+                "Unesite broj elemenata prvog kontejnera: Unesite elemente prvog kontejnera: Unesite broj elemenata drugog kontejnera: Unesite elemente drugog kontejnera: Uvrnuti presjek kontejnera:\\n     1      1      1\\n    12     12      3 \\n    12     21      3 \\n    21     12      3 \\n    21     21      3 \\n    14     50      5 \\n    33     60      6 \\n    82     55     10 \\n    66     48     12 \\n    66     93     12 \\n    95     59     14 \\n   666     99     18 \\nUvrnuta razlika kontejnera:\\n    48      5 \\nDovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3466,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - Testiranje funkcija 'UvrnutiPresjek' i 'UvrnutaRazlika' po SumiDjelilaca\n\/\/Povratna vrijednost funkcija je vektor vektora \u010diji su elementi proizvoljnog tipa.\n\n\tstd::deque<int> d1{15, 16, 17, 12, 13, 14}, d2{1, 5, 21, 51, 23};\n        std::vector<std::vector<int>> v1{UvrnutiPresjek(d1.begin(), d1.end(), d2.begin(), d2.end(), SumaDjelilaca)};\n\tstd::vector<std::vector<int>> v2{UvrnutaRazlika(d1.begin(), d1.end(), d2.begin(), d2.end(), SumaDjelilaca)};\n\t\n\tfor (std::vector<int>& red : v1)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n\tstd::cout << std::endl;\n\tfor (std::vector<int>& red : v2)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "14 23 24 \\n15 23 24 \\n\\n51 72 \\n21 32 \\n17 18 \\n16 31 \\n13 14 \\n12 28 \\n5 6 \\n1 1 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3467,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - Testiranje funkcija 'UvrnutiPresjek' i 'UvrnutaRazlika' po broju savrsenih djelilaca\n\n\tstd::deque<int> d1{6, 168, 28, 12}, d2{1, 28, 51, 6};\n        std::vector<std::vector<int>> v1{UvrnutiPresjek(d1.begin(), d1.end(), d2.begin(), d2.end(), BrojSavrsenihDjelilaca)};\n\tstd::vector<std::vector<int>> v2{UvrnutaRazlika(d1.begin(), d1.end(), d2.begin(), d2.end(), BrojSavrsenihDjelilaca)};\n\t\n\tfor (std::vector<int>& red : v1)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n\t\n\tstd::cout << std::endl;\n\tfor (std::vector<int>& red : v2)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6 6 1 \\n6 28 1 \\n12 6 1 \\n12 28 1 \\n28 6 1 \\n28 28 1 \\n\\n168 2 \\n51 0 \\n1 0 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3468,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - Testiranje funkcija 'UvrnutiPresjek' i 'UvrnutaRazlika' po broju prostih faktora\n\n\n\tstd::deque<int> d1{6, 168, 28, 12}, d2{28, 51, 6, 173};\n        std::vector<std::vector<int>> v1{UvrnutiPresjek(d1.begin(), d1.end(), d2.begin(), d2.end(), BrojProstihFaktora)};\n\tstd::vector<std::vector<int>> v2{UvrnutaRazlika(d1.begin(), d1.end(), d2.begin(), d2.end(), BrojProstihFaktora)};\n\t\n\tfor (std::vector<int>& red : v1)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n\t\n\tstd::cout << std::endl;\n\tfor (std::vector<int>& red : v2)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6 6 2 \\n6 51 2 \\n12 28 3 \\n28 28 3 \\n\\n173 1 \\n168 5 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3471,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7 - test funkcija sa 4 parametra \u010diji su elementi tipa int\n\/\/Funkcija UvrnutaRazlika sa 4 parametra radi analogno kao i funkcija \n\/\/UvrnutiPresjek sa 4 parametra, dakle obi\u010dnu razliku skupova\n\n\tstd::deque<int> d1{1, 2, 3}, d2{2, 4, 3, 5};\n    std::vector<std::vector<int>> v1{UvrnutiPresjek(d1.begin(), d1.end(), d2.begin(), d2.end())};\n\tstd::vector<std::vector<int>> v2{UvrnutaRazlika(d1.begin(), d1.end(), d2.begin(), d2.end())};\n\tfor (std::vector<int>& red : v1)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n\tstd::cout << std::endl;\n\tfor (std::vector<int>& red : v2)\n\t{\n\t\tfor (int& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 0 0 \\n3 0 0 \\n\\n5 0 \\n4 0 \\n1 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3472,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8 - test funkcija sa 4 parametra \u010diji su elementi tipa double\n\n\tstd::deque<double> d1{1., 2., 3.}, d2{2., 4., 3., 5.};\n    std::vector<std::vector<double>> v1{UvrnutiPresjek(d1.begin(), d1.end(), d2.begin(), d2.end())};\n\tstd::vector<std::vector<double>> v2{UvrnutaRazlika(d1.begin(), d1.end(), d2.begin(), d2.end())};\n\tfor (std::vector<double>& red : v1)\n\t{\n\t\tfor (double& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n\tstd::cout << std::endl;\n\tfor (std::vector<double>& red : v2)\n\t{\n\t\tfor (double& broj : red)\n\t\t\tstd::cout << broj << \" \";\n\t\tstd::cout << std::endl;\n\t}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 0 0 \\n3 0 0 \\n\\n5 0 \\n4 0 \\n1 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

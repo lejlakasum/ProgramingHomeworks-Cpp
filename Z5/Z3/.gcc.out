@@ -1,0 +1,4 @@
+/rhome/l/lkasum1/workspace/TP/Z5/Z3/main.cpp:153:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(prvi==drugi) return true;
+       ~~~~^ ~~~~~
+1 warning generated.

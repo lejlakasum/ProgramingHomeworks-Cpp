@@ -1,0 +1,10 @@
+/rhome/l/lkasum1/workspace/TP/Z4/Z3/main.cpp:91:127: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(s1.adresa!=s2.adresa || s1.sprat!=s2.sprat || s1.broj_soba!=s2.broj_soba || s1.namjesten!=s2.namjesten || s1.kvadratura!=s2.kvadratura)
+                                                                                                                 ~~~~~~~~~~~~~^ ~~~~~~~~~~~~~
+/rhome/l/lkasum1/workspace/TP/Z4/Z3/main.cpp:152:71: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(p1.ime_agenta_prodaje!=p2.ime_agenta_prodaje || p1.cijena_stana!=p2.cijena_stana || !JednakiDatumi(p1.datum_prodaje, p2.datum_prodaje) 
+                                                       ~~~~~~~~~~~~~~~^ ~~~~~~~~~~~~~~~
+/rhome/l/lkasum1/workspace/TP/Z4/Z3/main.cpp:248:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+3 warnings generated.

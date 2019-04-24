@@ -1,0 +1,88 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘virtual void Sanduk::Ispisi() const’:\nmain.cpp:30:36: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]\n                                    for(int i(0); i<tezine_predmeta.size(); ++i) std::cout<<tezine_predmeta[i]<<\" \"; std::cout<<\"(kg)\"<<std::endl<<\n                                    ^~~\nmain.cpp:30:117: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘for’\n                                    for(int i(0); i<tezine_predmeta.size(); ++i) std::cout<<tezine_predmeta[i]<<\" \"; std::cout<<\"(kg)\"<<std::endl<<\n                                                                                                                     ^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "30",
+                "col": "36",
+                "message": "this 'for' clause does not guard...",
+                "output": "/tmp/buildservice/bs_9293/main.cpp:30:36: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]                                    for(int i(0); i<tezine_predmeta.size(); ++i) std::cout<<tezine_predmeta[i]<<\" \"; std::cout<<\"(kg)\"<<std::endl<<                                    ^~~",
+                "code": "for(int i(0); i<tezine_predmeta.size(); ++i) std::cout<<tezine_predmeta[i]<<\" \"; std::cout<<\"(kg)\"<<std::endl<<"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3934": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Vreca\nSadrzaj: Brasno\nVlastita tezina: 0.1 (kg)\nTezina pohranjene materije: 25.5 (kg)\nUkupna tezina: 25.6 (kg)\n4\nVrsta spremnika: Sanduk\nSadrzaj: Voce\nTezine predmeta: 1 3 5 6 (kg)\nVlastita tezina: 50 (kg)\nUkupna tezina: 65 (kg)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3935": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Bure\nSadrzaj: Krv\nVlastita tezina: 5 (kg)\nSpecificna tezina tecnosti: 1300 (kg/m^3)\nZapremina tecnosti: 150 (l)\nUkupna tezina: 200 (kg)\n\nVrsta spremnika: Sanduk\nSadrzaj: Voce\nTezine predmeta: 1 3 5 6 (kg)\nVlastita tezina: 50 (kg)\nUkupna tezina: 65 (kg)\n\nVrsta spremnika: Vreca\nSadrzaj: Brasno\nVlastita tezina: 0.1 (kg)\nTezina pohranjene materije: 25.5 (kg)\nUkupna tezina: 25.6 (kg)\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3936": {
+            "status": 1,
+            "run_result": {
+                "output": "Skladiste je prazno",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "71234": {
+            "status": 1,
+            "run_result": {
+                "output": "Vrsta spremnika: Bure\nSadrzaj: Voda\nVlastita tezina: 15 (kg)\nSpecificna tezina tecnosti: 1000 (kg/m^3)\nZapremina tecnosti: 200 (l)\nUkupna tezina: 215 (kg)\n\nVrsta spremnika: Bure\nSadrzaj: Krv\nVlastita tezina: 5 (kg)\nSpecificna tezina tecnosti: 1300 (kg/m^3)\nZapremina tecnosti: 150 (l)\nUkupna tezina: 200 (kg)\n\nVrsta spremnika: Sanduk\nSadrzaj: Voce\nTezine predmeta: 1 3 5 6 (kg)\nVlastita tezina: 50 (kg)\nUkupna tezina: 65 (kg)\n\nVrsta spremnika: Vreca\nSadrzaj: Secer\nVlastita tezina: 0.5 (kg)\nTezina pohranjene materije: 40 (kg)\nUkupna tezina: 40.5 (kg)\n\nVrsta spremnika: Vreca\nSadrzaj: Brasno\nVlastita tezina: 0.1 (kg)\nTezina pohranjene materije: 25.5 (kg)\nUkupna tezina: 25.6 (kg)\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 63,
+    "time": 1498509024
+}

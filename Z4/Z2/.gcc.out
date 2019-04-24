@@ -1,0 +1,13 @@
+/rhome/l/lkasum1/workspace/TP/Z4/Z2/main.cpp:215:13: warning: variable 'p' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    else if(pol=='Z') p=GradjaninBiH::Pol::Zensko;
+            ^~~~~~~~
+/rhome/l/lkasum1/workspace/TP/Z4/Z2/main.cpp:217:42: note: uninitialized use occurs here
+        GradjaninBiH g(ime,d,m,god,sifra,p);
+                                         ^
+/rhome/l/lkasum1/workspace/TP/Z4/Z2/main.cpp:215:10: note: remove the 'if' if its condition is always true
+    else if(pol=='Z') p=GradjaninBiH::Pol::Zensko;
+         ^~~~~~~~~~~~~
+/rhome/l/lkasum1/workspace/TP/Z4/Z2/main.cpp:213:5: note: variable 'p' is declared here
+    GradjaninBiH::Pol p;
+    ^
+1 warning generated.

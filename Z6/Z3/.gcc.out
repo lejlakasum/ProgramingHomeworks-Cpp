@@ -1,0 +1,25 @@
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:76:33: error: no matching member function for call to 'open'
+     procitaj.close(); procitaj.open();
+                       ~~~~~~~~~^~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/fstream:538:7: note: candidate function not viable: requires at least argument '__s', but no arguments were provided
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/4.8/../../../../include/c++/4.8/fstream:558:7: note: candidate function not viable: requires at least argument '__s', but no arguments were provided
+      open(const std::string& __s, ios_base::openmode __mode = ios_base::in)
+      ^
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:159:46: warning: field 'ime_matrice' will be initialized after field 'elementi' [-Wreorder]
+ br_redova(br_redova), br_kolona(br_kolona), ime_matrice(ime),
+                                             ^
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:364:21: note: in instantiation of member function 'Matrica<double>::Matrica' requested here
+    Matrica<double> a(2, 3, 'a');
+                    ^
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:171:26: warning: field 'ime_matrice' will be initialized after field 'elementi' [-Wreorder]
+ br_kolona(m.br_kolona), ime_matrice(m.ime_matrice),
+                         ^
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:90:21: note: in instantiation of member function 'Matrica<double>::Matrica' requested here
+     Matrica<TipEl> pomocna(*this); //Omogucava da ukoliko dodje do bilo kakvih problema objekat ostane u istom stanju
+                    ^
+/rhome/l/lkasum1/workspace/TP/Z6/Z3/main.cpp:371:3: note: in instantiation of member function 'Matrica<double>::ObnoviIzBinarneDatoteke' requested here
+a.ObnoviIzBinarneDatoteke("PROBA2.DAT");
+  ^
+2 warnings and 1 error generated.
